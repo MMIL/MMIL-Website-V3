@@ -1,0 +1,241 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Events</title>
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'font-awesome/css/font-awesome.css' %}" rel="stylesheet">
+    <link href="{% static 'css/animate.css' %}" rel="stylesheet">
+    <link rel="icon" href="{% static 'img/logo3.png' %}" type="image/jpg">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Josefin+Slab:300|Montserrat:300;|Lato" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        jQuery(window).load(function() {
+            jQuery(".loader").fadeOut(300);
+        });
+
+    </script>
+
+</head>
+
+<body id="top">
+    <div class="loader"></div>
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container-fluid topnav">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand" title="Homepage"><img src="{% static 'img/logo3.png' %}">
+                    <p>MMIL</p>
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-right" id="mainNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="/about" id="link">About</a></li>
+                    <li><a href="/project" id="link">Contributions</a></li>
+                    <li class="active"><a href="/events" id="link">Events</a></li>
+                    <li><a href="/team" id="link">Team</a></li>
+                    <li><a href="/contact" id="link">Contact</a></li>
+                    <li><a href="/gallery" id="link">Gallery</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container events">
+        <div class="event-blocks">
+            <div class="row animated fadeInDown">
+                <div class="col-md-4" style="margin-left: 450px;">
+                    <h1 class="head-title">Upcoming Events</h1>
+                    <hr class="botm-line">
+                </div>
+            </div>
+            <div class="row animated fadeInDown">
+
+            </div>
+        </div>
+        <div class="event-blocks" style="margin-top: -100px;">
+            <div class="row animated fadeInDown">
+                <div class="col-md-4" style="margin-left: 450px;">
+                    <h1 class="head-title">Past Events</h1>
+                    <hr class="botm-line">
+                </div>
+            </div>
+            <div class="row animated fadeInDown">
+                <div class="col-md-4">
+                    <div class="event-object">
+                        <a href="#" data-toggle="modal" data-target="#1">
+                            <img src="{% static 'img/events/5.jpg' %}">
+                        </a>
+                        <a href="#" data-toggle="modal" data-target="#1" style="text-decoration: none; color: #000;"><h4>Orientation Programme</h4></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="event-object">
+                        <a href="#" data-toggle="modal" data-target="#myModal">
+                            <img src="{% static 'img/events/4.jpg' %}">
+                        </a>
+                        <a href="#" data-toggle="modal" data-target="#myModal" style="text-decoration: none; color: #000;"><h4>JSS Hackathon 2015</h4></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="event-object">
+                        <a href="#" data-toggle="modal" data-target="#myModal">
+                            <img src="{% static 'img/events/7.jpg' %}" style="height: 240px;">
+                        </a>
+                         <a href="#" data-toggle="modal" data-target="#myModal" style="text-decoration: none; color: #000;"><h4>Smart India Hackathon</h4></a>
+                    </div>
+                </div>
+
+            </div>
+            <br>
+             <div class="row animated fadeInDown">
+                <div class="col-md-4">
+                    <div class="event-object">
+                        <a href="#" data-toggle="modal" data-target="#myModal">
+                            <img src="{% static 'img/events/2.png' %}" style="height: 240px;">
+                        </a>
+                         <a href="#" data-toggle="modal" data-target="#myModal" style="text-decoration: none; color: #000;"><h4>Workshop on Web Development</h4></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="event-object">
+                        <a href="#" data-toggle="modal" data-target="#myModal">
+                            <img src="{% static 'img/events/8.png' %}" style="height: 240px;">
+                        </a>
+                        <a href="#" data-toggle="modal" data-target="#myModal" style="text-decoration: none; color: #000;"><h4>Android App Development</h4></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="event-object">
+                        <a href="#" data-toggle="modal" data-target="#myModal">
+                            <img src="{% static 'img/events/9.jpg' %}" style="height: 240px;">
+                        </a>
+                         <a href="#" data-toggle="modal" data-target="#myModal" style="text-decoration: none; color: #000;"><h4>Workshop on Java</h4></a>
+                    </div>
+                </div>
+            </div>
+            <br>
+             <div class="row animated fadeInDown">
+                <div class="col-md-4">
+                    <div class="event-object">
+                        <a href="#" data-toggle="modal" data-target="#myModal">
+                            <img src="{% static 'img/events/11.png' %}" style="height: 240px;">
+                        </a>
+                        <a href="#" data-toggle="modal" data-target="#myModal" style="text-decoration: none; color: #000;"><h4>Web App Development</h4></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="event-object">
+                        <a href="#" data-toggle="modal" data-target="#myModal">
+                            <img src="{% static 'img/events/12.png' %}" style="height: 240px;">
+                        </a>
+                         <a href="#" data-toggle="modal" data-target="#myModal" style="text-decoration: none; color: #000;"><h4>Windows App Development</h4></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="event-blocks" style="margin-top: -100px;">
+            <div class="row animated fadeInDown">
+                <div class="col-md-4" style="margin-left: 450px;">
+                    <h1 class="head-title">Zealicon Events</h1>
+                    <hr class="botm-line">
+                </div>
+            </div>
+            <div class="row animated fadeInDown">
+                <div class="col-md-4" style="margin-left: 380px;">
+                    <h4 class="text-center">Click here to <a href="/zealicon">visit our zealicon page</a></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row" style="padding: 20px 20px 20px 20px;">
+                        <div class="col-md-6">
+                            <img src="{% static 'img/events/5.jpg' %}" style="height: 500px; width: 400px">
+                        </div>
+                        <div class="col-md-6">
+                           <p class="text-justify" style="font-size: 16px;">
+                           The 3 Paramount features of a budding engineer. So here is a shout-out to all the geeky heads out there, from machine learning to IOT( internet of things) and from programming to web development all that you can think about from the techie world is here. THE MMIL (Microsoft Mobile Innovation Lab) is having its Orientation Program to give you a brief account of its identity. So get ready for some techie fun with a loads of fun games to tickle your funny bones .<br><br>
+                            Date -18th September<br>
+                            Time - 3:30 PM to 5:30 PM<br>
+                            Venue - Room- 213, Seminar Hall, AB-3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="inline-block">
+            <p class="copy" style="text-align: center;">&copy; copyright@2017
+                <a href="#top" title="Top" class="smoothScroll"><i class="fa fa-chevron-up fa-1x fa-bw" style="float: right;color: white; margin-right:20px;"></i></a></p>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".navbar a, #navbar-fixed-bottom").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 5000, function() {
+                        window.location.hash = hash;
+                    });
+                }
+
+            });
+            $(window).scroll(function() {
+                $(".slideanim").each(function() {
+                    var pos = $(this).offset().top;
+
+                    var winTop = $(window).scrollTop();
+                    if (pos < winTop + 600) {
+                        $(this).addClass("slide");
+                    }
+                });
+            });
+        });
+
+    </script>
+    <script>
+        $('.smoothScroll').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 700);
+                    return false;
+                }
+            }
+        });
+
+    </script>
+</body>
+
+</html>

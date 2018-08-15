@@ -1,0 +1,144 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About</title>
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'font-awesome/css/font-awesome.css' %}" rel="stylesheet">
+    <link href="{% static 'css/animate.css' %}" rel="stylesheet">
+    <link rel="icon" href="{% static 'img/logo3.png' %}" type="image/jpg">
+    <link href="{% static 'css/about.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Josefin+Slab:300|Lato" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        jQuery(window).load(function() {
+            jQuery(".loader").fadeOut(300);
+        });
+    </script>
+    <style>
+    .header {
+        margin-top: 70px;
+        height: 400px;
+        background: url('/static/img/cover.png') center center no-repeat scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    }
+    </style>
+</head>
+
+<body id="top">
+    <div class="loader"></div>
+
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container-fluid topnav">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand" title="Homepage"><img src="{% static 'img/logo3.png' %}">
+                    <p class="head">MMIL</p>
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-right" id="mainNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/about" id="link">About</a></li>
+                    <li><a href="/project" id="link">Contributions</a></li>
+                    <li><a href="/events" id="link">Events</a></li>
+                    <li><a href="/team" id="link">Team</a></li>
+                    <li><a href="/contact" id="link">Contact</a></li>
+                    <li><a href="/gallery" id="link">Gallery</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="header"></header>
+    <section class="container">
+        <div class="panel panel-default-about animated fadeInUp">
+            <div class="panel-heading-about">
+                <h3 class="display-3">About</h3>
+            </div>
+            <div class="panel-body-about">
+                Microsoft Mobile innovation lab provides a platform for research community to collaborate on mobile application, research and development. This facilitates the faculty as well as students to develop potential mobile application to touch millions of mobile users.
+                Mobile is a catalyst for innovation. New insight into the physical world enables to uncover hidden opportunities and create new products and services to capitalize on them. New understanding of people’s behavior helps anticipate needs and develop the products, services and experiences to meet them.
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="panel panel-default-about animated fadeInUp">
+            <div class="panel-heading-about">
+                <h3 class="display-3">Vision</h3>
+            </div>
+            <div class="panel-body-about">
+                The Microsoft Mobile Innovation Lab is a passionate team that makes ideas a reality. By adopting Agile, User-Centric, and Design Thinking practices, we solve problems and accelerate the delivery of mobile application that improve and enrich people’s lives worldwide.
+            </div>
+        </div>
+    </section>
+    <footer>
+      <div class="inline-block">
+        <p class="copy">&copy; copyright@2017
+          <a href="#top" title="Top" class="smoothScroll"><i class="fa fa-chevron-up fa-1x fa-bw" style="float: right;color: white;  margin-right:20px;"></i></a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".navbar a, #navbar-fixed-bottom").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 5000, function() {
+                        window.location.hash = hash;
+                    });
+                }
+
+            });
+            $(window).scroll(function() {
+                $(".slideanim").each(function() {
+                    var pos = $(this).offset().top;
+
+                    var winTop = $(window).scrollTop();
+                    if (pos < winTop + 600) {
+                        $(this).addClass("slide");
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        $('.smoothScroll').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 700);
+                    return false;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

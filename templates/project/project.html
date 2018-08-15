@@ -1,0 +1,192 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projects</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'font-awesome/css/font-awesome.css' %}" rel="stylesheet">
+    <link href="{% static 'css/animate.css' %}" rel="stylesheet">
+    <link rel="icon" href="{% static 'img/logo3.png' %}" type="image/jpg">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/project.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Josefin+Slab:300|Lato|Montserrat:300;" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        jQuery(window).load(function() {
+            jQuery(".loader").fadeOut(300);
+        });
+
+    </script>
+</head>
+
+<body id="top">
+    <div class="loader"></div>
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container-fluid topnav">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.html" class="navbar-brand" title="Homepage"><img src="{% static 'img/logo3.png' %}">
+                    <p>MMIL</p>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="mainNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="/about" id="link">About</a></li>
+                    <li class="active"><a href="/project" id="link">Contributions</a></li>
+                    <li><a href="/events" id="link">Events</a></li>
+                    <li><a href="/team" id="link">Team</a></li>
+                    <li><a href="/contact" id="link">Contact</a></li>
+                    <li><a href="/gallery" id="link">Gallery</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container main">
+        <section class="section-padding wow fadeInUp delay-02s" id="portfolio">
+            <div class="container">
+                <div class="row animated fadeInDown">
+                    <div class="col-md-3 col-sm-12">
+                        <div class="section-title">
+                            <h2 class="head-title">OUR CONTRIBUTIONS</h2>
+                            <hr class="botm-line">
+                            <!-- <p class="sec-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p> -->
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-12">
+                        <div class="col-md-3 col-sm-6 padding-right-zero">
+                            <div class="portfolio-box design">
+                                <img src="{% static 'img/apps/casewiki.png' %}" alt="" class="img-responsive" style="height: 200px;">
+                                <h4>CaseWiki</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 padding-right-zero">
+                            <div class="portfolio-box design">
+                                <img src="{% static 'img/apps/micranet.png' %}" alt="" class="img-responsive" style="height: 200px;">
+                                <h4>Micranet</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 padding-right-zero">
+                            <div class="portfolio-box design">
+                                <img src="{% static 'img/apps/my_shortcut.png' %}" alt="" class="img-responsive" style="height: 200px;">
+                                <h4>My shortcut</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 padding-right-zero">
+                            <div class="portfolio-box design">
+                                <img src="{% static 'img/apps/my-location.png' %}" alt="" class="img-responsive" style="height: 200px;">
+                                <h4>My Location</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 padding-right-zero">
+                            <div class="portfolio-box design">
+                                <img src="{% static 'img/apps/navegar.png' %}" alt="" class="img-responsive" style="height: 200px;">
+                                <h4>Navegar</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 padding-right-zero">
+                            <div class="portfolio-box design">
+                                <img src="{% static 'img/apps/skynet.png' %}" alt="" class="img-responsive" style="height: 200px;">
+                                <h4>Skynet</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 padding-right-zero">
+                            <div class="portfolio-box design">
+                                <img src="{% static 'img/apps/turbo.png' %}" alt="" class="img-responsive" style="height: 200px;">
+                                <h4>Turbo Search Engine</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 padding-right-zero">
+                            <div class="portfolio-box design">
+                                <img src="{% static 'img/apps/uptu.png' %}" alt="" class="img-responsive" style="height: 200px;">
+                                <h4>UPTU</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 padding-right-zero">
+                            <div class="portfolio-box design">
+                                <img src="{% static 'img/apps/virtual world.png' %}" alt="" class="img-responsive" style="height: 200px;">
+                                <h4>Virtual World</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 padding-right-zero">
+                            <div class="portfolio-box design">
+                                <img src="{% static 'img/apps/sonido.png' %}" alt="" class="img-responsive" style="height: 200px;">
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 padding-right-zero">
+                            <div class="portfolio-box design">
+                                <img src="{% static 'img/apps/sudoku.png' %}" alt="" class="img-responsive" style="height: 200px;">
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 padding-right-zero">
+                            <div class="portfolio-box design">
+                                <img src="{% static 'img/apps/minesweeper.png' %}" alt="" class="img-responsive" style="height: 200px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer style="margin-bottom:-10px;" class="navbar-fixed-bottom">
+        <div class="inline-block">
+            <p class="copy" style="text-align: center;">&copy; copyright@2017
+                <a href="#top" title="Top" class="smoothScroll"><i class="fa fa-chevron-up fa-1x fa-bw" style="float: right;color: white; margin-right:20px;"></i></a></p>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".navbar a, #navbar-fixed-bottom").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 5000, function() {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+            $(window).scroll(function() {
+                $(".slideanim").each(function() {
+                    var pos = $(this).offset().top;
+                    var winTop = $(window).scrollTop();
+                    if (pos < winTop + 600) {
+                        $(this).addClass("slide");
+                    }
+                });
+            });
+        });
+
+    </script>
+    <script>
+        $('.smoothScroll').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 700);
+                    return false;
+                }
+            }
+        });
+
+    </script>
+</body>
+
+</html>
