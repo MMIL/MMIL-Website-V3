@@ -16,13 +16,14 @@ def registration(request):
 		email=request.POST.get('email')
 		contact=request.POST.get('contact')
 		leng=len(department)
+		print(type(department))
 		interests=''
 		for i in range(leng):
 			interests=interests+department[i]+','
 		register_data=Student_Registration(
 			name=name,
 			admission_no=admission_no,
-			interests=interests,
+			interests=department,
 			branch=branch,
 			year=year,
 			email=email,
