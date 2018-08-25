@@ -3,7 +3,6 @@ from django.db import models
 # Create your models here.
 class Student_Registration(models.Model):
 	name=models.CharField(max_length=255)
-	question=models.TextField()
 	admission_no=models.CharField(max_length=255)
 	interests=models.CharField(max_length=255)
 	branch=models.CharField(max_length=255)
@@ -14,4 +13,4 @@ class Student_Registration(models.Model):
 	
 
 	def __str__(self):
-		return self.title
+		return self.name
