@@ -27,7 +27,7 @@
     </script>
     <style type="text/css">
         #id_first_name{
-            width: 530px;
+            width: 450px;
             height: 34px;
             margin-left: 20px;
             border: 1px solid #ccc;
@@ -41,7 +41,7 @@
             border-radius: 4px;
         }
         #id_email{
-            width: 530px;
+            width: 450px;
             height: 34px;
             margin-left: 20px;
             border: 1px solid #ccc;
@@ -55,7 +55,7 @@
             border-radius: 4px;
         }
         #id_message{
-            width: 1080px;
+            width: 1000px;
             margin-left: 20px;
             height: 94px;
             border: 1px solid #ccc;
@@ -66,6 +66,26 @@
         }
         .azx{
             margin-left: 20px;
+        }
+
+
+
+        @media only screen and (max-width: 600px){
+            #id_first_name{
+                width: 200px;
+            }
+            #id_last_name{
+                width: 200px;
+            }
+            #id_email{
+                width: 200px;
+            }
+            #id_subject{
+                width: 200px;
+            }
+            #id_message{
+                width: 200px;
+            }
         }
     </style>
 
@@ -144,7 +164,7 @@
                                 {{form_1}}
                             </div>
                             {% endfor %}
-                            <br><br><br>
+                            <br><br>
                             <div class="row text-center" id="btn">
                                 <div class="col-md-2 col-md-offset-5">
                                     <input type="submit" class="btn btn-success btn-send" value="Send message">

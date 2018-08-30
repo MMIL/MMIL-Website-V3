@@ -1,3 +1,4 @@
+
 ::-webkit-scrollbar {
     width: 5px;
 }
@@ -230,3 +231,7 @@
 
 }
 
+
+#id_first_name{
+    width:450px;
+}
