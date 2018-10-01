@@ -200,7 +200,7 @@
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/space10-community/conversational-form@0.9.83/dist/conversational-form.min.js" crossorigin></script>
 </head>
 <body>
-	<form id="form" method="POST" cf-form>{% csrf_token %}
+	<form id="form" method="POST" action="/register" cf-form>{% csrf_token %}
 	  <cf-robot-message cf-questions="Hello, my friend!!!"></cf-robot-message>
   	  <cf-robot-message cf-questions="Let's get started"></cf-robot-message>
 	  <fieldset>

@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .views import index,about,project,event,team,contact,gallery,zealicon
-from registration.views import registration
+from registration.views import registration,create_register
 
 
 
@@ -31,5 +31,6 @@ urlpatterns = [
     path('gallery/',gallery),
     path('zealicon/',zealicon),
     path('register',registration),
+    path('create',create_register)
 
 ]

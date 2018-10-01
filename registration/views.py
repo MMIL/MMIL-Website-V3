@@ -10,6 +10,36 @@ def registration(request):
 		print(request.POST)
 		name=request.POST.get('name')
 		admission_no=request.POST.get('adm_no')
+		department=request.POST.getlist('department')
+		branch=request.POST.get('branch')
+		year=request.POST.get('year')
+		email=request.POST.get('email')
+		contact=request.POST.get('contact')
+		leng=len(department)
+		print(type(department))
+		interests=''
+		for i in range(leng):
+			interests=interests+department[i]+','
+		register_data=Student_Registration(
+			name=name,
+			admission_no=admission_no,
+			interests=interests,
+			branch=branch,
+			year=year,
+			email=email,
+			phone_no=contact
+			)
+		register_data.save()
+		return redirect('/')
+	return render(request, "register/register.html",{})
+
+
+
+def create_register(request):
+	if request.POST:
+		print(request.POST)
+		name=request.POST.get('name')
+		admission_no=request.POST.get('adm_no')
 		department=request.POST.get('department')
 		branch=request.POST.get('branch')
 		year=request.POST.get('year')
@@ -30,5 +60,4 @@ def registration(request):
 			phone_no=contact
 			)
 		register_data.save()
-		return redirect('/')
-	return render(request, "register/register.html",{})
+		return HttpResponse('')
