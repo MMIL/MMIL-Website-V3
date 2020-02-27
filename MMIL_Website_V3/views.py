@@ -2,7 +2,6 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from .forms import contact_form
 from django.core.mail import send_mail,EmailMultiAlternatives
-from .settings import EMAIL_HOST_USER
 from registration.models import Student_Registration
 from contact.models import contactmsg
 from django.utils import timezone
@@ -89,15 +88,16 @@ def contact(request):
 			return render(request,"contact/contact.html",content)
 		newmsg.save()
 		content["Noerror"]=True
-		return render(request,"about/about.html",content)
 		### For Sending Emails ##########################################################
 		#################################################################################
-		from_email=EMAIL_HOST_USER
-		to_list=[EMAIL_HOST_USER,"shuklanushiv@gmail.com"]
-		message="Hello Admin of MMIL \n \n A User wants to contact us with the following information as - \n\n Name -  "+first_name+" "+last_name+"\n E-mail - "+email+"\n Message - "+message
-		### For Sending Emails ##########################################################
-		#################################################################################
-		send_mail(subject,message,from_email,to_list)
+		# from_email=EMAIL_HOST_USER
+		# print(from_email)
+		# to_list=[EMAIL_HOST_USER,"shuklanushiv@gmail.com"]
+		# message="Hello Admin of MMIL \n \n A User wants to contact us with the following information as - \n\n Name -  "+first_name+" "+last_name+"\n E-mail - "+email+"\n Message - "+message
+		# ### For Sending Emails ##########################################################
+		# #################################################################################
+		# send_mail(subject,message,from_email,to_list)
+		# return render(request,"about/about.html",content)
 	return render(request, "contact/contact.html",content)
 
 
