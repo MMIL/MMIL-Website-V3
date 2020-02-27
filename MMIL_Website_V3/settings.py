@@ -145,5 +145,5 @@ STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn","media_root")
 EMAIL_USE_TLS = True
 EMAIL_HOST='smtp.gmail.com'
 EMAIL_HOST_USER='mmiljss@gmail.com'
-EMAIL_HOST_PASSWORD='mmiljss123'
+EMAIL_HOST_PASSWORD='jssmmil@1234'
 EMAIL_PORT=587
