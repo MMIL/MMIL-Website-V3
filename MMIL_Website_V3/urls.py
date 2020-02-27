@@ -30,7 +30,7 @@ urlpatterns = [
     path('contact/',contact),
     path('gallery/',gallery),
     path('zealicon/',zealicon),
-    path('register',registration),
-    path('create',create_register)
+    path('register/',registration),
+    path('create/',create_register)
 
 ]

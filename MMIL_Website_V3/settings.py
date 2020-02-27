@@ -41,7 +41,8 @@ INSTALLED_APPS = [
 
 
     #our_apps
-    'registration'
+    'registration',
+    'contact',
 ]
 
 MIDDLEWARE = [

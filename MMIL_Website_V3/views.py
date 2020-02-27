@@ -4,6 +4,8 @@ from .forms import contact_form
 from django.core.mail import send_mail,EmailMultiAlternatives
 from .settings import EMAIL_HOST_USER
 from registration.models import Student_Registration
+from contact.models import contactmsg
+from django.utils import timezone
 
 
 def index(request):
@@ -62,7 +64,9 @@ def team(request):
 def contact(request):
 	form_class=contact_form(request.POST or None)
 	content={
-		"formu": form_class
+		"formu": form_class,
+		"error":False,
+		"Noerror":False,
 	}
 	if form_class.is_valid():
 		print(form_class.cleaned_data)
@@ -71,10 +75,25 @@ def contact(request):
 		email=form_class.cleaned_data.get("email")
 		subject=form_class.cleaned_data.get("subject")
 		message=form_class.cleaned_data.get("message")
+		try:
+			newmsg=contactmsg.objects.create(
+				firstname=first_name,
+				lastname=last_name,
+				email=email,
+				subject=subject,
+				message=message,
+				subtime=timezone.now()
+			)
+		except:
+			content["error"]=True
+			return render(request,"contact/contact.html",content)
+		newmsg.save()
+		content["Noerror"]=True
+		return render(request,"about/about.html",content)
 		### For Sending Emails ##########################################################
 		#################################################################################
 		from_email=EMAIL_HOST_USER
-		to_list=[EMAIL_HOST_USER,"dwevediar@gmail.com"]
+		to_list=[EMAIL_HOST_USER,"shuklanushiv@gmail.com"]
 		message="Hello Admin of MMIL \n \n A User wants to contact us with the following information as - \n\n Name -  "+first_name+" "+last_name+"\n E-mail - "+email+"\n Message - "+message
 		### For Sending Emails ##########################################################
 		#################################################################################
