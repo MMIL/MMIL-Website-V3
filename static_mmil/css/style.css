@@ -272,8 +272,9 @@ li:hover:after {
 }
 
 .fa-android:hover,
-.fa-cloud:hover,
-.fa-code:hover {
+.fa-code:hover,
+.fa-desktop:hover,
+.fa-pencil:hover{
     filter: opacity(0.8);
 }
 
@@ -291,8 +292,20 @@ li:hover:after {
     transition: .5s;
 }
 
-.fa-cloud:before {
-    content: "\f0c2";
+.fa-code:before {
+    content: "\f121";
+    background-color: #2D8A80;
+    padding: 5rem;
+    border-radius: 50%;
+    color: white;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+
+.fa-desktop:before {
+    content: "\f108";
     background-color: #2D8A80;
     padding: 5rem;
     border-radius: 50%;
@@ -304,11 +317,12 @@ li:hover:after {
     transition: .5s;
 }
 
-.fa-code:before {
-    content: "\f121";
+.fa-pencil:before {
+    content: "\f040";
     background-color: #2D8A80;
     padding: 5rem;
     border-radius: 50%;
+    color: white;
     color: white;
     -moz-transition: .5s;
     -webkit-transition: .5s;
